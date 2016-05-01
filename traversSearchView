@@ -1,0 +1,37 @@
+
+
+ /*
+  * the searchview is extends LinearLayout ，there  
+  */
+  
+  private void traversSearchView(View view, int index) {
+
+     if (view instanceof SearchView) {
+         SearchView searchView = (SearchView)view;
+         for (int i = 0; i < searchView.getChildCount(); ++i) {
+             traverseSearchView(searchView.getChildAt(i), i);
+         }
+     }
+     else if (view instanceof LinearLayout) {
+         if (/*id value from search_view.xml*/ == view.getId()) {
+             //TODO
+         }
+         LinearLayout linearlayout = (LinearLayout)view;
+         for (int i = 0; i < linearlayout.getChildAt(i), i) {
+	    traverseSearchView(linearlayout.getChildAt(i), i);
+	 }
+     }
+     else if (view instanceof EditText) {
+         if (/*id value from search_view.xml*/ == view.getId()) {
+             //TODO
+         }
+         //TODO
+     }
+     else if (view instanceof ImageView) {
+         if (/*id value from search_view.xml*/ == view.getId()) {
+             //TODO
+         }
+         //TODO
+     }
+     //other 'else if' clause
+ }
